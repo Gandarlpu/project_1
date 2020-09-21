@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "738219866652",
+    "firebase_url": "https://timmer-f798f.firebaseio.com",
+    "project_id": "timmer-f798f",
+    "storage_bucket": "timmer-f798f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738219866652:android:ba48fde3698eb7a898bdd9",
+        "android_client_info": {
+          "package_name": "com.example.simplestopwatch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "738219866652-2gvnkqh25v3sul539ve03hk4b551o98e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.simplestopwatch",
+            "certificate_hash": "627065be4535dc3de282eb5272a0c1a743f361aa"
+          }
+        },
+        {
+          "client_id": "738219866652-7jdkgkbk4l2nphmb392niqajmjiv2r66.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC79TjE-s9cBY2gkdk7k9qK_M9jThNoalA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "738219866652-7jdkgkbk4l2nphmb392niqajmjiv2r66.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

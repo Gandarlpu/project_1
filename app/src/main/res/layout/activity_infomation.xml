@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Information">
+
+        <LinearLayout
+            android:layout_marginTop="60dp"
+            android:padding="30dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="월급"
+                android:textSize="25dp"
+                android:textColor="#9ADCE4"/>
+
+            <EditText
+                android:id="@+id/salary"
+                android:hint="세전 월급 입력"
+                android:ems="9"
+                android:maxLines="1"
+                android:paddingTop="15dp"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:padding="30dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="출근 시간"
+                android:textSize="25dp"
+                android:textColor="#9ADCE4"/>
+
+            <EditText
+                android:id="@+id/start_time"
+                android:paddingTop="15dp"
+                android:inputType="number"
+                android:hint="ex) 9시 출근 -> 9 입력"
+                android:ems="1"
+                android:maxLines="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:padding="30dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="근무 시간 "
+                android:textSize="25dp"
+                android:hint=""
+                android:textColor="#9ADCE4"/>
+
+            <EditText
+                android:id="@+id/work_time"
+                android:inputType="number"
+                android:paddingTop="15dp"
+                android:ems="1"
+                android:maxLines="1"
+                android:hint="자신의 하루 근무시간"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/next"
+            android:visibility="visible"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="177dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:text="완료"
+            android:textSize="20dp" />
+
+</LinearLayout>
