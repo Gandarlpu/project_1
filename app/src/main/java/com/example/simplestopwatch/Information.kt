@@ -62,6 +62,10 @@ open class Information : AppCompatActivity() {
 
             Edit_salary = Edit_salary.replace("," , "")
 
+            //초당급여 계산
+            val sec_salary: Double =
+                real_salary(Edit_salary.toDouble() , Edit_work_time.toDouble())
+
             //공백처리
             if(Edit_salary != null && Edit_salary.equals("")){
                 Toast.makeText(this@Information , "월급 입력" , Toast.LENGTH_SHORT).show()
@@ -71,12 +75,8 @@ open class Information : AppCompatActivity() {
                 Toast.makeText(this@Information , "근무시간 입력" , Toast.LENGTH_SHORT).show()
             }else {
 
-                //초당급여 계산
-                val sec_salary: Double =
-                    real_salary(Edit_salary.toDouble() , Edit_work_time.toDouble())
-
-                //DB입력
-                input_db(sec_salary)
+            //DB입력
+            input_db(sec_salary)
                 
             }
         }
@@ -130,13 +130,19 @@ open class Information : AppCompatActivity() {
 
             //화면전환
             val intent = Intent(this@Information, MainActivity::class.java)
-            intent.putExtra("salary", sec_salary)
+            intent.putExtra("sec_salary" , sec_salary)
             startActivity(intent)
 
             finish()
         }
+    }//input_db
+
+    //세자리 콤마찍기
+    fun makeCommaNumber(input:Int): String{
+        val formatter = DecimalFormat("###,###")
+        return formatter.format(input)
     }
-    
+
     //초급계산
     open fun real_salary(salary : Double , work_time : Double) : Double {
         // 월급 -> 주급 -> 일급 -> 시급 -> 분급 -> 초급
@@ -150,12 +156,5 @@ open class Information : AppCompatActivity() {
         return salary_sec
 
     }// fun real_salary
-
-    
-    //세자리 콤마찍기
-    fun makeCommaNumber(input:Int): String{
-        val formatter = DecimalFormat("###,###")
-        return formatter.format(input)
-    }
 
 }

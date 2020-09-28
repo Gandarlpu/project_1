@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:orientation="horizontal"
     android:layout_height="match_parent"
+    android:background="#3D2170"
+    android:gravity="center"
     tools:context=".Splash">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SPLASH"
-        android:layout_gravity="center"
-        android:layout_marginLeft="160dp"/>
 
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center" />
 
 </LinearLayout>
