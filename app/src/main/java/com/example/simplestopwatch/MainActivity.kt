@@ -8,6 +8,7 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
@@ -54,6 +55,12 @@ class MainActivity : AppCompatActivity() {
                 }
 
 
+        //다시시작
+        reload.setOnClickListener {
+            val intent = Intent(this@MainActivity , Information::class.java)
+            startActivity(intent)
+        }
+
         //시작
         start.setOnClickListener {
 
@@ -71,6 +78,7 @@ class MainActivity : AppCompatActivity() {
 
 
     } // onCreate
+
 
     //로그아웃
     fun logout(){

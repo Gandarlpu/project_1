@@ -18,12 +18,12 @@
 
         <TextView
             android:id="@+id/hourView"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="00"
             android:textSize="70dp"
-            android:textColor="#9ADCE4"
-            />
+            android:textColor="#9ADCE4" />
 
 
         <TextView
@@ -31,6 +31,7 @@
             android:layout_height="wrap_content"
             android:text=":"
             android:textSize="70dp"
+            android:textStyle="bold"
             android:textColor="#9ADCE4"/>
 
         <TextView
@@ -39,6 +40,7 @@
             android:layout_height="wrap_content"
             android:text="00"
             android:textSize="70dp"
+            android:textStyle="bold"
             android:textColor="#9ADCE4"
             android:layout_gravity="center"/>
 
@@ -49,6 +51,7 @@
             android:layout_height="wrap_content"
             android:text=":"
             android:textSize="70dp"
+            android:textStyle="bold"
             android:textColor="#9ADCE4"/>
 
 
@@ -58,6 +61,7 @@
             android:layout_height="wrap_content"
             android:text="00"
             android:textSize="70dp"
+            android:textStyle="bold"
             android:textColor="#9ADCE4"
             android:layout_gravity="center"/>
 
@@ -66,6 +70,7 @@
 
     <Button
         android:id="@+id/start"
+        android:textStyle="bold"
         android:visibility="visible"
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:layout_width="177dp"
@@ -155,6 +160,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/second_linear"
             android:layout_below="@+id/first_linear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -215,9 +221,52 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_below="@+id/second_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="17dp"
+            android:orientation="vertical"
+            android:background="@drawable/round_border">
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:text="빅맥"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="#9ADCE4" />
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:text="0"
+                android:gravity="center_horizontal"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                android:textColor="#9ADCE4" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_below="@+id/second_linear"
+            android:layout_toRightOf="@+id/second_linear"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/content_add"
+            android:layout_gravity="center"
+            android:layout_width="180dp"
+            android:layout_height="100dp"
+            android:text="새로운 켄턴츠"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/round_border_2"/>
+
 
     </RelativeLayout>
-
 
     <View
         android:layout_marginTop="20dp"
@@ -227,16 +276,16 @@
 
 
     <Button
-        android:id="@+id/content_add"
-        android:layout_marginTop="50dp"
-        android:layout_gravity="center"
-        android:layout_width="180dp"
-        android:layout_height="50dp"
-        android:text="새로운 켄턴츠 추가"
+        android:id="@+id/reload"
+        android:layout_marginTop="20dp"
         android:textStyle="bold"
-        android:textColor="#FFFFFF"
-        android:background="@drawable/round_border_2"/>
-
+        android:visibility="visible"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="177dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:text="Reload"
+        android:textSize="20dp" />
 
 
 </LinearLayout>
