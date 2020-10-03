@@ -111,14 +111,14 @@
             <TextView
                 android:layout_width="180dp"
                 android:layout_height="50dp"
-                android:text="아메리카노"
+                android:text="아메리카노(잔)"
                 android:gravity="center"
                 android:textSize="25dp"
                 android:textStyle="bold"
                 android:textColor="#9ADCE4" />
 
             <TextView
-                android:id="@+id/americano_View"
+                android:id="@+id/first_content"
                 android:layout_width="180dp"
                 android:layout_height="50dp"
                 android:text="0"
@@ -141,14 +141,14 @@
             <TextView
                 android:layout_width="180dp"
                 android:layout_height="50dp"
-                android:text="국밥"
+                android:text="국밥(그릇)"
                 android:gravity="center"
                 android:textSize="25dp"
                 android:textStyle="bold"
                 android:textColor="#9ADCE4" />
 
             <TextView
-                android:id="@+id/googbab_View"
+                android:id="@+id/second_content"
                 android:layout_width="180dp"
                 android:layout_height="50dp"
                 android:text="0"
@@ -172,14 +172,14 @@
             <TextView
                 android:layout_width="180dp"
                 android:layout_height="50dp"
-                android:text="영화"
+                android:text="영화(티켓)"
                 android:gravity="center"
                 android:textSize="25dp"
                 android:textStyle="bold"
                 android:textColor="#9ADCE4" />
 
             <TextView
-                android:id="@+id/movie_View"
+                android:id="@+id/third_content"
                 android:layout_width="180dp"
                 android:layout_height="50dp"
                 android:text="0"
@@ -203,14 +203,14 @@
             <TextView
                 android:layout_width="180dp"
                 android:layout_height="50dp"
-                android:text="낮잠"
+                android:text="유산소(kcal)"
                 android:gravity="center"
                 android:textSize="25dp"
                 android:textStyle="bold"
                 android:textColor="#9ADCE4" />
 
             <TextView
-                android:id="@+id/sleep_View"
+                android:id="@+id/forth_content"
                 android:layout_width="180dp"
                 android:layout_height="50dp"
                 android:text="0"
@@ -233,13 +233,14 @@
             <TextView
                 android:layout_width="180dp"
                 android:layout_height="50dp"
-                android:text="빅맥"
+                android:text="연애 횟수"
                 android:gravity="center"
                 android:textSize="25dp"
                 android:textStyle="bold"
                 android:textColor="#9ADCE4" />
 
             <TextView
+                android:id="@+id/five_content"
                 android:layout_width="180dp"
                 android:layout_height="50dp"
                 android:text="0"

@@ -60,12 +60,6 @@ open class Information : AppCompatActivity() {
             Edit_work_time = work_time.text.toString()
             Edit_start_time = start_time.text.toString()
 
-            Edit_salary = Edit_salary.replace("," , "")
-
-            //초당급여 계산
-            val sec_salary: Double =
-                real_salary(Edit_salary.toDouble() , Edit_work_time.toDouble())
-
             //공백처리
             if(Edit_salary != null && Edit_salary.equals("")){
                 Toast.makeText(this@Information , "월급 입력" , Toast.LENGTH_SHORT).show()
@@ -74,6 +68,12 @@ open class Information : AppCompatActivity() {
             }else if(TextUtils.isEmpty(Edit_work_time)){
                 Toast.makeText(this@Information , "근무시간 입력" , Toast.LENGTH_SHORT).show()
             }else {
+
+            Edit_salary = Edit_salary.replace("," , "")
+
+            //초당급여 계산
+            val sec_salary: Double =
+                real_salary(Edit_salary.toDouble() , Edit_work_time.toDouble())
 
             //DB입력
             input_db(sec_salary)

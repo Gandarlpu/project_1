@@ -33,6 +33,11 @@ class MainActivity : AppCompatActivity() {
         var work_start = ""
         var sec_salary : Double = 0.0
 
+    var count1 = 0
+    var count2 = 0
+    var count3 = 0
+    var count4 = 0
+
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_main)
@@ -56,9 +61,12 @@ class MainActivity : AppCompatActivity() {
 
 
         //다시시작
+        reload.setVisibility(View.INVISIBLE)
         reload.setOnClickListener {
-            val intent = Intent(this@MainActivity , Information::class.java)
+
+            val intent = Intent(this@MainActivity, Information::class.java)
             startActivity(intent)
+
         }
 
         //시작
@@ -128,16 +136,39 @@ class MainActivity : AppCompatActivity() {
             val sec = (time / 100) % 60 //1초
             val milli = time % 100 // 0.01 초*/
 
+            //초당 급여
             result += sec_salary
+            var americano = result.div(6000)
+            var soup = result.div(7000)
+            var movie = result.div(8000)
+            var walk = min * 3.5//분당 3.5kcal
+
+            println("아메리카노 : " + soup)
 
             runOnUiThread {
 
                 //content_View
-                
-
+                if(americano >= 1){
+                    count1 ++
+                    first_content.text = "$count1"
+                }
+                if(soup >= 1){
+                    count2 ++
+                    second_content.text = "$count2"
+                }
+                if(movie >= 1){
+                    count3 ++
+                    third_content.text = "$count3"
+                }
+                if(walk >= 1){
+                    count4 ++
+                    forth_content.text = "$count4"
+                }
 
                 //시간 종료
                 if (sec == work_time){
+                    if(reload.getVisibility() == View.INVISIBLE)
+                        reload.setVisibility(View.VISIBLE)
 
                     hour=0
                     min=0
