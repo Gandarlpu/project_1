@@ -32,7 +32,7 @@
         <LinearLayout
             android:background="@drawable/round_border_2"
             android:layout_marginTop="30dp"
-            android:padding="30dp"
+            android:padding="20dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -63,7 +63,7 @@
 
         <LinearLayout
             android:layout_marginTop="10dp"
-            android:padding="30dp"
+            android:padding="20dp"
             android:background="@drawable/round_border_2"
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -87,6 +87,7 @@
                 android:background="@drawable/round_border_2"
                 android:ems="1"
                 android:maxLines="1"
+                android:maxLength="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
@@ -94,7 +95,7 @@
 
 
         <LinearLayout
-            android:padding="30dp"
+            android:padding="20dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/round_border_2"
             android:orientation="vertical"
@@ -117,6 +118,7 @@
                 android:paddingTop="15dp"
                 android:ems="1"
                 android:maxLines="1"
+                android:maxLength="1"
                 android:background="@drawable/round_border_2"
                 android:hint="자신의 하루 근무시간"
                 android:gravity="center"

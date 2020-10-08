@@ -60,29 +60,34 @@ class MainActivity : AppCompatActivity() {
                 }
 
 
-        //다시시작
-        reload.setVisibility(View.INVISIBLE)
-        reload.setOnClickListener {
-
-            val intent = Intent(this@MainActivity, Information::class.java)
-            startActivity(intent)
-
-        }
-
-        //시작
-        start.setOnClickListener {
-
-            if(start.getVisibility() == View.VISIBLE) {
-                start.setVisibility(View.INVISIBLE)
-
-                if (isRunning) {
-                    timeToText(sec_salary , work_time.toInt())
-                } else {
-                    Log.d("msg", "실패")
-                }
+            //컨텐츠 추가
+            content_add.setOnClickListener {
+                Toast.makeText(this@MainActivity , "준비 중입니다." , Toast.LENGTH_SHORT).show()
             }
 
-        }//start_Button
+            //다시시작
+            reload.setVisibility(View.INVISIBLE)
+            reload.setOnClickListener {
+
+                val intent = Intent(this@MainActivity, Information::class.java)
+                startActivity(intent)
+
+            }
+
+            //시작
+            start.setOnClickListener {
+
+                if(start.getVisibility() == View.VISIBLE) {
+                    start.setVisibility(View.INVISIBLE)
+
+                    if (isRunning) {
+                        timeToText(sec_salary , work_time.toInt())
+                    } else {
+                        Log.d("msg", "실패")
+                    }
+                }
+
+            }//start_Button
 
 
     } // onCreate
@@ -138,35 +143,41 @@ class MainActivity : AppCompatActivity() {
 
             //초당 급여
             result += sec_salary
+            
+            //컨텐츠 계산
             var americano = result.div(6000)
             var soup = result.div(7000)
             var movie = result.div(8000)
             var walk = min * 3.5//분당 3.5kcal
 
-            println("아메리카노 : " + soup)
+            //컨텐츠 계산-2
+            var seoul_apartment = 1000000000
+            //seoul_apartment/reslt/24 = 몇일 일하면 구할수잇는지
+
+
 
             runOnUiThread {
 
                 //content_View
                 if(americano >= 1){
-                    count1 ++
-                    first_content.text = "$count1"
+                    val americano_View = makeCommaNumber(americano.toInt())
+                    first_content.text = "$americano_View"
                 }
                 if(soup >= 1){
-                    count2 ++
-                    second_content.text = "$count2"
+                    val soup_View = makeCommaNumber(soup.toInt())
+                    second_content.text = "${soup.toInt()}"
                 }
                 if(movie >= 1){
-                    count3 ++
-                    third_content.text = "$count3"
-                }
-                if(walk >= 1){
-                    count4 ++
-                    forth_content.text = "$count4"
+                    val movie_View = makeCommaNumber(movie.toInt())
+                    third_content.text = "${movie.toInt()}"
                 }
 
+
+                forth_content.text = "$walk"
+
+
                 //시간 종료
-                if (sec == work_time){
+                if (hour == work_time){
                     if(reload.getVisibility() == View.INVISIBLE)
                         reload.setVisibility(View.VISIBLE)
 
